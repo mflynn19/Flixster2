@@ -9,28 +9,32 @@
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="138dp"
+        android:contentDescription="movie thumbnail"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="movie poster" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ellipsize="end"
         android:fontFamily="@font/josefinbold"
         android:maxLines="2"
         android:text="The Boss Baby: Family Business"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -40,11 +44,14 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:ellipsize="end"
+        android:fontFamily="@font/josefinreg"
         android:maxLines="5"
         android:text="Super cute second movie of a previous movie where the little brother is an absolute boss child."
-        android:fontFamily="@font/josefinreg"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="0.054" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
