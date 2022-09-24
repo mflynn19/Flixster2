@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 
 const val MOVIE_EXTRA = "MOVIE_EXTRA"
@@ -41,13 +42,13 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         fun bind(movie: Movie) {
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
+            val radius = 30; // corner radius, higher value = more rounded
             if (context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                Glide.with(context).load(movie.thumbnailUrl).into(ivPoster)
+                Glide.with(context).load(movie.thumbnailUrl).centerCrop().transform(RoundedCorners(radius)).into(ivPoster)
             }
             else{
-                Glide.with(context).load(movie.posterImageUrl).into(ivPoster)
+                Glide.with(context).load(movie.posterImageUrl).centerCrop().transform(RoundedCorners(radius)).into(ivPoster)
             }
-
         }
 
         override fun onClick(p0: View?) {
