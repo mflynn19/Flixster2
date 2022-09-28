@@ -28,7 +28,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### Notes
 
-The YouTube videos take a very long time to load, however the logic to autoplay 5+ star rated movies is in the DetailActivity.kt file lines 75-79, so please excuse the choppy walkthrough. 
+The YouTube videos take a very long time to load so please wait for the video to autoplay in the gif. 
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
